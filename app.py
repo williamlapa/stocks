@@ -142,6 +142,7 @@ df_desvios = desvios(df_cotacao, data1, data2)
 st.subheader('Tabela de valores - Análise Desvios')
 st.write(df_desvios[0])
 
+st.subheader('Correlação entre ativos')
 fig, ax = plt.subplots()
-sns.heatmap(df_cotacao.corr(), ax=ax, annot = True)
+sns.heatmap(df_cotacao.corr(), annot = True)
 st.write(fig)
