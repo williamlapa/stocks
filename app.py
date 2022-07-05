@@ -143,5 +143,5 @@ st.subheader('Tabela de valores - Análise Desvios')
 st.write(df_desvios[0])
 
 fig, ax = plt.subplots()
-sns.heatmap(df_desvios[0].corr(), ax=ax, annot = True)
+sns.heatmap(df_cotacao.corr(), ax=ax, annot = True)
 st.write(fig)
