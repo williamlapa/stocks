@@ -4,6 +4,8 @@ import numpy as np
 from pandas_datareader import data as web
 from datetime import datetime, timedelta
 from workadays import workdays as wd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 st.title('Análise de Ações')
 
@@ -139,3 +141,7 @@ st.write(df_cotacao.tail(30))
 df_desvios = desvios(df_cotacao, data1, data2)
 st.subheader('Tabela de valores - Análise Desvios')
 st.write(df_desvios[0])
+
+fig, ax = plt.subplots()
+sns.heatmap(df_desvios[0].corr(), ax=ax, annot = True)
+st.write(fig)

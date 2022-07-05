@@ -4,3 +4,5 @@ numpy
 pandas_datareader
 datetime
 workadays
+seaborn
+matplotlib
